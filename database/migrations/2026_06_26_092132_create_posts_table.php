@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nome')->unique();
             $table->string('categoria');
             $table->string('tag');
-            $table->string('conteudo');
+            $table->text('conteudo');
             $table->timestamps();
         });
     }
