@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,3 +9,5 @@ Route::get('/', function () {
 Route::get('/sobre', function(){
     return view('sobre');
 })->name('sobre');
+
+Route::get('/posts',[PostController::class,'index'])->name('posts.index');

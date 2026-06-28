@@ -12,7 +12,7 @@
             <a href="{{ route('home') }}" class="logo">MinimalDev</a>
             <ul>
                 <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                <li><a href="posts.html">Posts</a></li>
+                <li><a href="{{ route('posts.index') }}">Posts</a></li>
                 <li><a href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="user.html">Perfil</a></li>
