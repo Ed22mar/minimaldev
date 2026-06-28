@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class contato extends Model
 {
     //
+    protected $fillable = [
+        'nome',
+        'email',
+        'mensagem',
+    ];
 }
