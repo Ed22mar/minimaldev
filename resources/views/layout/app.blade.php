@@ -9,9 +9,9 @@
 <body>
     <header>
         <nav>
-            <a href="home.html" class="logo">MinimalDev</a>
+            <a href="{{ route('home') }}" class="logo">MinimalDev</a>
             <ul>
-                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="{{ route('home') }}" class="active">Home</a></li>
                 <li><a href="posts.html">Posts</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
