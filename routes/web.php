@@ -13,9 +13,9 @@ Route::get('/sobre', function(){
     return view('sobre');
 })->name('sobre');
 
-/*Route::get('/user' , function (){
+Route::get('/user', function (){
     return view('user');
-});*/
+})->name('user');
 
 /**Rotas nomeada de contato */
 Route::get('/contato', [ContatoController::class,'index'])->name('contato.index');
