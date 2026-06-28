@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="{{ route('home') }}" class="active">Home</a></li>
                 <li><a href="posts.html">Posts</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="user.html">Perfil</a></li>
                 <li><a href="loginpage.html">Login</a></li>
