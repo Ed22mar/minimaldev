@@ -22,3 +22,4 @@ Route::get('/contato', [ContatoController::class,'index'])->name('contato.index'
 
 /**Rotas nomeada de posts */
 Route::get('/posts',[PostController::class,'index'])->name('posts.index');
+Route::get('/posts/create',[PostController::class,'create'])->name('posts.create');

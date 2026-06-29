@@ -75,7 +75,7 @@
                 </div>
 
                 <div style="margin-top: 2rem; border-top: 1px solid #2A2A35; padding-top: 1.25rem; text-align: right;">
-                    <a href="criar_post.html" class="btn" style="font-size: 0.9rem;">+ Escrever Novo Artigo</a>
+                    <a href="{{ route('posts.create') }}" class="btn" style="font-size: 0.9rem;">+ Escrever Novo Artigo</a>
                 </div>
             </div>
 
