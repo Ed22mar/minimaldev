@@ -13,7 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = post::Paginate(10);
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -31,10 +32,9 @@ class PostController extends Controller
     public function store(StorePostRequest $request)
     {
         //
-        $post = post::create([
+        $post = post::create(
             $request->validated(),
-        ]);
-
+        );
         return redirect()->route('posts.index',$post)->with('success','Post criado com sucesso.');
     }
 

@@ -33,6 +33,17 @@
                 <p>Como padronizar as mensagens de commits no Git para facilitar a automação de changelogs e revisões.</p>
                 <a href="#">Ler mais &rarr;</a>
             </div>
+            @foreach ($posts as $post )
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="color: #777; font-size: 0.85rem;">{{ \Carbon\Carbon::parse($post->created_at)->locale('pt_BR')->isoFormat('D MMM, YYYY') }}
+                    </span>
+                </div>
+                <h3>{{ $post->nome }}</h3>
+                <p>{{ $post->conteudo }}.</p>
+                <a href="#">Ler mais &rarr;</a>
+            </div>
+            @endforeach
         </div>
     </main>
 @endsection
