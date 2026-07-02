@@ -41,7 +41,7 @@
                 </div>
                 <h3>{{ $post->nome }}</h3>
                 <p>{{ $post->conteudo }}.</p>
-                <a href="#">Ler mais &rarr;</a>
+                <a href="{{ route('posts.show',$post) }}">Ler mais &rarr;</a>
             </div>
             @endforeach
         </div>
