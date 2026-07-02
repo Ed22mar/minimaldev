@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function manage()
+    {
+        $posts = post::all();
+        return view('posts.manage', compact('posts'));
+    }
     /**
      * Display a listing of the resource.
      */

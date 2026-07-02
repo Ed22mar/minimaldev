@@ -52,7 +52,7 @@
                 <div>
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2A2A35; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
                         <h3 style="margin-bottom: 0; font-size: 1.3rem;">Minhas Publicações Recentes</h3>
-                        <a href="gerenciar_posts.html" style="color: #50FA7B; text-decoration: none; font-size: 0.9rem; font-weight: bold;">Gerenciar Tudo &rarr;</a>
+                        <a href="{{ route('posts.manage') }}" style="color: #50FA7B; text-decoration: none; font-size: 0.9rem; font-weight: bold;">Gerenciar Tudo &rarr;</a>
                     </div>
 
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
