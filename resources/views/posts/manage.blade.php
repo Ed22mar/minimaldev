@@ -53,7 +53,7 @@
                             <td style="padding: 1.25rem 1.5rem;"><span class="badge-warning" style="background-color: #50FA7B; color: #1E1E24;">{{ $post->categoria }}</span></td>
                             <td style="padding: 1.25rem 1.5rem; color: #777;">{{ \Carbon\Carbon::parse($post->created_at)->locale('pt_BR')->isoFormat('D MMM, YYYY') }}</td>
                             <td style="padding: 1.25rem 1.5rem; text-align: right; display: flex; gap: 0.5rem; justify-content: flex-end;">
-                                <a href="#" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Editar</a>
+                                <a href="{{ route('posts.edit', $post) }}" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Editar</a>
                                 <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; border-color: #ff5555; color: #ff5555;" onclick="confirm('Tens a certeza que queres eliminar este post?')">Excluir</button>
                             </td>
                         </tr>
