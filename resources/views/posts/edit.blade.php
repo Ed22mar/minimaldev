@@ -7,8 +7,9 @@
         <p>Partilhe o seu conhecimento com a comunidade.</p>
 
         <div style="max-width: 800px; background-color: #141419; padding: 2.5rem; border-radius: 6px; border: 1px solid #2A2A35; margin-top: 2rem;">
-            <form action="{{ route('posts.store') }}" method="POST">
+            <form action="{{ route('posts.update',$post) }}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="form-group">
                     <label for="post-title">Título do Artigo</label>
                     <input type="text" id="post-title" placeholder="{{ $post->nome }}" name="nome" required>
