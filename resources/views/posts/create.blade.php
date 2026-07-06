@@ -35,7 +35,7 @@
                 </div>
 
                 <div style="display: flex; gap: 1rem; justify-content: flex-end;">
-                    <a href="posts.html" class="btn btn-secondary">Cancelar</a>
+                    <a href="{{ route('posts.index') }}" class="btn btn-secondary">Cancelar</a>
                     <button type="submit" class="btn">Publicar</button>
                 </div>
             </form>
