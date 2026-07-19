@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title','Gerenciar Meus Posts')
 @section('content')
 
