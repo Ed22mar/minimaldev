@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePostRequest;
 use App\Models\post;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    use AuthorizesRequests;
     public function manage()
     {
         $posts = post::all();
@@ -38,7 +40,7 @@ class PostController extends Controller
     {
         //
         $post = post::create(
-            $request->validated(),
+            $request->user()->posts()->validated(),
         );
         return redirect()->route('posts.index',$post)->with('success','Post criado com sucesso.');
     }
@@ -58,6 +60,7 @@ class PostController extends Controller
     public function edit(post $post)
     {
         //
+        $this->authorize('update',$post);
         return view('posts.edit', compact('post'));
     }
 
@@ -67,6 +70,7 @@ class PostController extends Controller
     public function update(StorePostRequest $request, post $post)
     {
         //
+        $this->authorize('update', $post);
         $post->update($request->validated());
         return redirect()->route('posts.show', $post)->with('success','Posr actualizado com sucesso.');
     }
