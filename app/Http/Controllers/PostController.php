@@ -72,7 +72,7 @@ class PostController extends Controller
         //
         $this->authorize('update', $post);
         $post->update($request->validated());
-        return redirect()->route('posts.show', $post)->with('success','Posr actualizado com sucesso.');
+        return redirect()->route('posts.show', $post)->with('success','Post actualizado com sucesso.');
     }
 
     /**

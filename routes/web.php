@@ -2,9 +2,30 @@
 
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthController;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 
+
+/**
+ * rotas user
+ */
+
+Route::middleware('guest')->group(function(){
+    // simples exibição de formulário de login
+    Route::get('/login', function(){
+        return view('auth.login');
+    })->name('login');
+
+    // handler básico para submissão de login (implemente conforme necessário)
+    Route::post('/login', function(){
+        return redirect()->route('home');
+    });
+
+    //Router::get('/register',[AuthController::class, 'showRegister'])->name('register');
+    //Router::post('/register',[AuthController::class, 'register']);
+});
 /**Rotas estaticas */
 Route::get('/', function () {
     return view('home');
@@ -19,7 +40,6 @@ Route::get('/user', function (){
 
 /**Rotas nomeada de contato */
 Route::get('/contato', [ContatoController::class,'index'])->name('contato.index');
-
 /**Rotas nomeada de posts */
 route::get('/posts/manage', [PostController::class, 'manage'])->name('posts.manage');
 
